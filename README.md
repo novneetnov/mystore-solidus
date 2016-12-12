@@ -1,24 +1,5 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ToDo:  
+- Install all the frontend componenets.
+- Divide the header into navbar and other partials.
+- Put the images, css and js assets into place.
+- Make the Cart in the navbar empty initially. Add items when clicked Add to Cart.
