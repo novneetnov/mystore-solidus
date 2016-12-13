@@ -22,8 +22,15 @@
 		<!-- BEGIN CART -->
 		<div class="top-cart-block">
 			<div class="top-cart-info">
-				<a href="javascript:void(0);" class="top-cart-info-count">3 items</a>
-				<a href="javascript:void(0);" class="top-cart-info-value">$1260</a>
+			<div id="link-to-cart" data-hook>
+				<noscript>
+					<%= link_to Spree.t(:cart), '/cart' %>
+				</noscript>
+				&nbsp;
+			</div>
+			<script>Spree.fetch_cart('<%= j spree.cart_link_url %>')</script>
+				<%#<%= link_to "3 items", "javascript:void(0);", class: "top-cart-info-count" %>
+				<%#<%= link_to "$1260", "javascript:void(0);", class: "top-cart-info-value" %>
 			</div>
 			<i class="fa fa-shopping-cart"></i>
 
