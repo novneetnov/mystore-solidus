@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platform: :mri
