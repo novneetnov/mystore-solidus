@@ -7,4 +7,5 @@
 - (x) Get jq-slim-scroll working
 - (x) Logo method to provide custom Logo.
 - Correct & Complete the Taxonomy in the main navbar
-- Complet the landing Carousel
+- Complete the landing Carousel
+- Implement the *Add to Cart* link and check if it is working in the navbar

@@ -35,19 +35,36 @@
 
 			<div class="top-cart-content-wrapper">
 				<div class="top-cart-content">
-					<ul class="scroller" style="height: 250px;">
-						<li>
-							<a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
-							<span class="cart-content-count">x 1</span>
-							<strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
-							<em>$1230</em>
-							<a href="javascript:void(0);" class="del-goods">&nbsp;</a>
-						</li>
-					</ul>
-					<div class="text-right">
-						<a href="shop-shopping-cart.html" class="btn btn-default">View Cart</a>
-						<a href="shop-checkout.html" class="btn btn-primary">Checkout</a>
-					</div>
+					<% if @order.line_items.empty? %>
+						<div data-hook="empty_cart" class="text-center">
+							<p><%= Spree.t(:your_cart_is_empty) %></p>
+							<p>
+								<%= link_to Spree.t(:continue_shopping), root_path, :class => 'btn btn-primary btn-xs' %>
+							</p>
+						</div>
+					<% else %>
+						<ul class="scroller" style="height: 250px;">
+							<li>
+								<%= @order.line_items.each do |line_item| %>
+									<%= link_to line_item_path do %>
+										<%= image_tag line_item.image, alt: "" %>
+									<% end %>
+								<% end %>
+								<span class="cart-content-count">x <%= line_item.quantity %></span>
+								<strong><%= link_to line_item.title, line_item_path %></strong>
+								<em><%= number_to_currency line_item.price %></em>
+								<a href="javascript:void(0);" class="del-goods">&nbsp;</a>
+							</li>
+						</ul>
+						<div class="text-right">
+							<%= link_to "View Cart", cart_path, class: "btn btn-default btn-xs" %>
+							<%= button_tag :class => 'btn btn-primary btn-xs', :id => 'checkout-link', :name => 'checkout' do %>
+								<%= Spree.t(:checkout) %>
+							<% end %>
+
+						</div>
+					<% end %>
+
 				</div>
 			</div>            
 		</div>
@@ -57,35 +74,10 @@
 		<div class="header-navigation">
 			<ul>
 				<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-					Woman 
+					<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
+						Woman 
 
-				</a>
-
-				<!-- BEGIN DROPDOWN MENU -->
-				<ul class="dropdown-menu">
-					<li class="dropdown-submenu">
-						<a href="shop-product-list.html">Hi Tops <i class="fa fa-angle-right"></i></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="shop-product-list.html">Second Level Link</a></li>
-							<li><a href="shop-product-list.html">Second Level Link</a></li>
-							<li class="dropdown-submenu">
-								<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-									Second Level Link 
-									<i class="fa fa-angle-right"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="shop-product-list.html">Third Level Link</a></li>
-									<li><a href="shop-product-list.html">Third Level Link</a></li>
-									<li><a href="shop-product-list.html">Third Level Link</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="shop-product-list.html">Running Shoes</a></li>
-					<li><a href="shop-product-list.html">Jackets and Coats</a></li>
-				</ul>
-				<!-- END DROPDOWN MENU -->
+					</a>
 				</li>
 				<li class="dropdown dropdown-megamenu">
 				<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
@@ -151,60 +143,6 @@
 				</ul>
 				</li>
 				<li><a href="shop-item.html">Kids</a></li>
-				<li class="dropdown dropdown100 nav-catalogue">
-				<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-					New
-
-				</a>
-				<ul class="dropdown-menu">
-					<li>
-					<div class="header-navigation-content">
-						<div class="row">
-							<div class="col-md-3 col-sm-4 col-xs-6">
-								<div class="product-item">
-									<div class="pi-img-wrapper">
-										<a href="shop-item.html"><img src="assets/pages/img/products/model4.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
-									</div>
-									<h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-									<div class="pi-price">$29.00</div>
-									<a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-4 col-xs-6">
-								<div class="product-item">
-									<div class="pi-img-wrapper">
-										<a href="shop-item.html"><img src="assets/pages/img/products/model3.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
-									</div>
-									<h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-									<div class="pi-price">$29.00</div>
-									<a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-4 col-xs-6">
-								<div class="product-item">
-									<div class="pi-img-wrapper">
-										<a href="shop-item.html"><img src="assets/pages/img/products/model7.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
-									</div>
-									<h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-									<div class="pi-price">$29.00</div>
-									<a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-4 col-xs-6">
-								<div class="product-item">
-									<div class="pi-img-wrapper">
-										<a href="shop-item.html"><img src="assets/pages/img/products/model4.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
-									</div>
-									<h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-									<div class="pi-price">$29.00</div>
-									<a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					</li>
-				</ul>
-				</li>
 				<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
 					Pages 
@@ -232,9 +170,6 @@
 					<li><a href="shop-terms-conditions-page.html">Terms &amp; Conditions</a></li>
 				</ul>
 				</li>
-
-
-				<li><a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes&amp;utm_source=download&amp;utm_medium=banner&amp;utm_campaign=metronic_frontend_freebie" target="_blank">Admin theme</a></li>
 
 				<!-- BEGIN TOP SEARCH -->
 				<li class="menu-search">
