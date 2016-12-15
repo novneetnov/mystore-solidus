@@ -15,6 +15,7 @@
     "tests"
   ],
 	"dependencies": {
-		"jquery-slimscroll": "*"
+		"jquery-slimscroll": "*",
+		"owl.carousel": "*"
 	}
 }

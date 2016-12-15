@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-slimscroll/jquery.slimscroll
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
@@ -20,8 +21,8 @@
 $(document).ready(function() {
 	Layout.init();    
 	Layout.initOWL();
-	Layout.initImageZoom();
-	Layout.initTouchspin();
+	//Layout.initImageZoom();
+	//Layout.initTouchspin();
 	Layout.initTwitter();
 });
 
