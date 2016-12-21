@@ -16,6 +16,9 @@
   ],
 	"dependencies": {
 		"jquery-slimscroll": "*",
-		"owl.carousel": "*"
+		"owl.carousel": "*",
+		"bootstrap-touchspin": "3.1.2",
+		"fancybox": "*",
+		"jquery-zoom": "*"
 	}
 }

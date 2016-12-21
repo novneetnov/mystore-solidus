@@ -1,0 +1,18 @@
+<div>
+	<div class="product-item">
+		<div class="pi-img-wrapper">
+			<%= image_tag(item.display_image.attachment(:product), class: "img-responsive", alt: "") %>
+			<div>
+				<%= link_to "Zoom", item.display_image.attachment(:large), class: "btn btn-default fancybox-button" %>
+				<%= link_to "View", "#product-pop-up_#{ item.id }", class: "btn btn-default fancybox-fast-view" %>
+				<%#<%= render partial: "shared/fast_view", locals: { product: item } %>
+			</div>
+		</div>
+		<h3>
+			<%= link_to item.name, product_path(item) %>
+		</h3>
+		<div class="pi-price"><%= item.display_price.to_html %></div>
+		<%#<%= link_to "Add to Cart", line_items_path("line_items[product_id]": item.id), method: :post, class: "btn btn-default add2cart" %>
+		<!--div class="sticker sticker-new"></div-->
+	</div>
+</div>

@@ -13,16 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-slimscroll/jquery.slimscroll
+//= require fancybox/source/jquery.fancybox.pack
 //= require owl.carousel
+//= require bootstrap-touchspin
 //= require bootstrap-sprockets
+//= require jquery-zoom
 //= require turbolinks
 //= require_tree .
 
 $(document).ready(function() {
 	Layout.init();    
 	Layout.initOWL();
-	//Layout.initImageZoom();
-	//Layout.initTouchspin();
+	Layout.initImageZoom();
+	Layout.initTouchspin();
 	Layout.initTwitter();
 });
 

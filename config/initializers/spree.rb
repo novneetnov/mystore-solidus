@@ -11,7 +11,9 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "USD"
+  config.currency = "INR"
+	country = Spree::Country.find_by_name('India')
+	config.default_country_id = country.id if country.present?
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
@@ -23,7 +25,8 @@ Spree.config do |config|
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
   # any inventory changes.
   # config.inventory_cache_threshold = 3
-
+	
+	config.max_level_in_taxons_menu = 2
 
   # Frontend:
 
