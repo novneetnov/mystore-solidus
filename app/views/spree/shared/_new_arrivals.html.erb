@@ -1,4 +1,4 @@
-<div class="sale-product">
+<div class="col-md-12 sale-product">
 	<h2>New Arrivals</h2>
 	<div class="owl-carousel owl-carousel5">
 		<% @new_arrivals.each do |new_arrival| %>
@@ -7,6 +7,6 @@
 	</div>
 </div>
 
-<%#<% @new_arrivals.each do |new_arrival| %>
-	<%#<%= render partial: "shared/fast_view", locals: { product: new_arrival } %>
-<%#<% end %>
+<% @new_arrivals.each do |new_arrival| %>
+	<%= render partial: "spree/shared/fast_view", locals: { product: new_arrival } %>
+<% end %>

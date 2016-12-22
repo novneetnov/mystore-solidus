@@ -13,3 +13,4 @@
 	- Add products with categories(taxonomies) in the admin section
 - (x) Complete the landing Carousel
 - Implement the *Add to Cart* link and check if it is working in the navbar
+- Correct the fast view for the Products.

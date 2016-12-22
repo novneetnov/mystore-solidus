@@ -1,7 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-touchspin/src/jquery.bootstrap-touchspin.css";
+@import "fancybox/source/jquery.fancybox.css";
 @import "font-awesome";
 @import "owl.carousel.css";
+
+
 @import "corporate/css/style.css";
 @import "corporate/css/style-responsive.css";
 @import "corporate/css/custom.css";

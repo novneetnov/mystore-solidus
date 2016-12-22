@@ -11,15 +11,16 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery-slimscroll/jquery.slimscroll
-//= require fancybox/source/jquery.fancybox.pack
-//= require owl.carousel
-//= require bootstrap-touchspin
 //= require bootstrap-sprockets
+//= require bootstrap-touchspin
+//= require fancybox/source/jquery.fancybox.pack
+//= require jquery-slimscroll/jquery.slimscroll
+//= require owl.carousel
 //= require jquery-zoom
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
 
 $(document).ready(function() {
 	Layout.init();    

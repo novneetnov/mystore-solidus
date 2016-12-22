@@ -334,11 +334,12 @@ var Layout = function () {
 
         initTouchspin: function () {
             $(".product-quantity .form-control").TouchSpin({
-                buttondown_class: "btn quantity-down",
-                buttonup_class: "btn quantity-up"
+								buttondown_class: "btn quantity-down",
+								buttonup_class: "btn quantity-up",
+								verticalbuttons: true
             });
-            $(".quantity-down").html("<i class='fa fa-angle-down'></i>");
-            $(".quantity-up").html("<i class='fa fa-angle-up'></i>");
+            //$(".quantity-down").html("<i class='fa fa-angle-down'></i>");
+            //$(".quantity-up").html("<i class='fa fa-angle-up'></i>");
         },
 
         initFixHeaderWithPreHeader: function () {
