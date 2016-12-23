@@ -12,7 +12,7 @@
 			<%= link_to item.name, product_path(item) %>
 		</h3>
 		<div class="pi-price"><%= item.display_price.to_html %></div>
-		<%#<%= link_to "Add to Cart", line_items_path("line_items[product_id]": item.id), method: :post, class: "btn btn-default add2cart" %>
+		<%= link_to "Add to Cart", root_path, method: :post, class: "btn btn-default add2cart" %>
 		<div class="sticker sticker-new"></div>
 	</div>
 </div>

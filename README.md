@@ -14,3 +14,5 @@
 - (x) Complete the landing Carousel
 - Implement the *Add to Cart* link and check if it is working in the navbar
 - Correct the fast view for the Products.
+- Create the Product Show Page.
+- Create the Pre Footer and Footer section
