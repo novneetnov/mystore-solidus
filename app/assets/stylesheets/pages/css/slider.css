@@ -97,60 +97,60 @@
 
 /* Carousel Item Background Images */
 .carousel-slider .carousel-item-one {
-    background: url(../../../assets/onepage/img/slider/slide1.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide1/bg-5181b4fa6f639033dae4b090d8847d75042088dbf7e9c2d2b5b979f269a4ed7c.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-two {
-    background: url(../../../assets/onepage/img/slider/slide2.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide2/bg-ce112f3328b42a607fe74975649e9b4344930d15b45c93fe0d3f563a60c9be85.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-three {
-    background: url(../../../assets/onepage/img/slider/slide3.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide3/bg-fda71ddb172c15ff30ab15ecf4edd485b91b1f96336e064caeec78518d7dbe4c.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-four {
-    background: url(../../../assets/pages/img/shop-slider/slide1/bg.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide1/bg-5181b4fa6f639033dae4b090d8847d75042088dbf7e9c2d2b5b979f269a4ed7c.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-five {
-    background: url(../../../assets/pages/img/shop-slider/slide2/bg.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide2/bg-ce112f3328b42a607fe74975649e9b4344930d15b45c93fe0d3f563a60c9be85.jpg);
     background-size: cover;
 }
 
 .carousel-slider .carousel-item-six {
-    background: url(../../../assets/pages/img/shop-slider/slide3/bg.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide3/bg-fda71ddb172c15ff30ab15ecf4edd485b91b1f96336e064caeec78518d7dbe4c.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-seven {
-    background: url(../../../assets/pages/img/shop-slider/slide4/bg.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/shop-slider/slide4/bg-8ea7cb6d9731836dc376db1def524cdc3ee0beec66138afceb2bfedeff9e2d9a.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-eight {
-    background: url(../../../assets/pages/img/frontend-slider/bg9.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/frontend-slider/bg1-dd6523b9d627250e8aa616a2aa6222f6531490a4fbf4037f8fa568ee59435320.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-nine {
-    background: url(../../../assets/pages/img/frontend-slider/bg1.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/frontend-slider/bg1-dd6523b9d627250e8aa616a2aa6222f6531490a4fbf4037f8fa568ee59435320.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-ten {
-    background: url(../../../assets/pages/img/frontend-slider/bg2.jpg);
+    background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/frontend-slider/bg2-6895bf636edd96bf9042b5c775e424308e24545ce5b9fa5387094c54292b90ea.jpg);
     background-size: cover;
     background-position: center center;
 }

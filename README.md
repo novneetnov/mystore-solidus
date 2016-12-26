@@ -16,3 +16,5 @@
 - Correct the fast view for the Products.
 - Create the Product Show Page.
 - Create the Pre Footer and Footer section
+- Figure out how to access static AWS uploads in the Views.
+- Make the App work in Heroku after having all static images in AWS S3. 
