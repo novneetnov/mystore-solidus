@@ -3,8 +3,7 @@
 		<div class="pi-img-wrapper">
 			<%= image_tag(item.display_image.attachment(:product), class: "img-responsive", alt: "") %>
 			<div>
-				<%= link_to "Zoom", item.display_image.attachment(:large), class: "btn btn-default fancybox-button" %>
-				<%= link_to "View", "#product-pop-up_#{ item.id }", class: "btn btn-default fancybox-fast-view" %>
+				<%= link_to "Quick View", "#product-pop-up_#{ item.id }", class: "btn btn-default fancybox-fast-view" %>
 				<%#<%= render partial: "spree/shared/fast_view", locals: { product: item } %>
 			</div>
 		</div>

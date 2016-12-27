@@ -16,8 +16,9 @@ gem 'solidus_auth_devise'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'dotenv-rails', :groups => [:development, :test]
-gem "asset_sync"
-gem "fog-aws"
+gem "paperclip"
+gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk-v1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
