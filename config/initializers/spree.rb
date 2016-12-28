@@ -53,7 +53,7 @@ Spree.config do |config|
   #   server: Rails.env.production? ? 'production' : 'test',
   #   test_mode: !Rails.env.production?
   # )
-end
+end if Spree::Country.table_exists?
 
 Spree::Frontend::Config.configure do |config|
   config.use_static_preferences!
