@@ -238,15 +238,15 @@ GEM
     select2-rails (3.5.9.1)
       thor (~> 0.14)
     sixarm_ruby_unaccent (1.1.1)
-    solidus (2.0.1)
-      solidus_api (= 2.0.1)
-      solidus_backend (= 2.0.1)
-      solidus_core (= 2.0.1)
-      solidus_frontend (= 2.0.1)
-      solidus_sample (= 2.0.1)
-    solidus_api (2.0.1)
+    solidus (2.0.0)
+      solidus_api (= 2.0.0)
+      solidus_backend (= 2.0.0)
+      solidus_core (= 2.0.0)
+      solidus_frontend (= 2.0.0)
+      solidus_sample (= 2.0.0)
+    solidus_api (2.0.0)
       rabl (= 0.13.0)
-      solidus_core (= 2.0.1)
+      solidus_core (= 2.0.0)
       versioncake (~> 3.0)
     solidus_auth_devise (1.6.2)
       deface (~> 1.0.0)
@@ -255,7 +255,7 @@ GEM
       json
       multi_json
       solidus_core (>= 1.0.6, < 3)
-    solidus_backend (2.0.1)
+    solidus_backend (2.0.0)
       bourbon (>= 4, < 6)
       coffee-rails
       font-awesome-rails (~> 4.0)
@@ -264,9 +264,9 @@ GEM
       jquery-ui-rails (~> 5.0.0)
       sass-rails
       select2-rails (= 3.5.9.1)
-      solidus_api (= 2.0.1)
-      solidus_core (= 2.0.1)
-    solidus_core (2.0.1)
+      solidus_api (= 2.0.0)
+      solidus_core (= 2.0.0)
+    solidus_core (2.0.0)
       activemerchant (~> 1.48)
       acts_as_list (~> 0.3)
       awesome_nested_set (~> 3.0, >= 3.0.1)
@@ -287,16 +287,16 @@ GEM
       stringex (~> 1.5.1)
       truncate_html (~> 0.9, >= 0.9.2)
       twitter_cldr (~> 3.0)
-    solidus_frontend (2.0.1)
+    solidus_frontend (2.0.0)
       canonical-rails (~> 0.1.1)
       coffee-rails
       font-awesome-rails (~> 4.0)
       jquery-rails
       sass-rails
-      solidus_api (= 2.0.1)
-      solidus_core (= 2.0.1)
-    solidus_sample (2.0.1)
-      solidus_core (= 2.0.1)
+      solidus_api (= 2.0.0)
+      solidus_core (= 2.0.0)
+    solidus_sample (2.0.0)
+      solidus_core (= 2.0.0)
     spring (2.0.0)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -367,7 +367,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
-  solidus
+  solidus (= 2.0.0)
   solidus_auth_devise
   spring
   spring-watcher-listen (~> 2.0.0)

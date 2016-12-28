@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'solidus'
+gem 'solidus', '= 2.0.0'
 gem 'solidus_auth_devise'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
