@@ -470,13 +470,13 @@ body.page-header-fixed {
   display: none;
   margin: 25px 0 0 30px;
   position: relative;
-  background: #fff url(../img/icons/toggler.png) no-repeat 6px 8px;
+  background: #fff url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/corporate/img/icons/toggler-6a69f25c95d7c8099d13e35f9ecd0d9377f95bc1dee0e871c678b1a550c48727.png) no-repeat 6px 8px;
 }
 .header .mobi-toggler i {
   display: none;
 }
 .header .mobi-toggler:hover {
-  background: #e34f00 url(../img/icons/toggler.png) no-repeat 6px -28px;
+  background: #e34f00 url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/corporate/img/icons/toggler-6a69f25c95d7c8099d13e35f9ecd0d9377f95bc1dee0e871c678b1a550c48727.png) no-repeat 6px -28px;
   border-color: #e34f00;
   color: #fff;
 }

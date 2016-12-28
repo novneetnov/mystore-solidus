@@ -357,10 +357,10 @@ Header and header elements
 	height: 63px;
 }
 .sticker-sale {
-	background: url(../../pages/img/sale.png) no-repeat;
+	background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/sale-c0c347759f826273d53fcb5fe8d4a46e0e556bfb2eea257fa29f01ae3837a6c9.png) no-repeat;
 }
 .sticker-new {
-	background: url(../../pages/img/new.png) no-repeat;
+	background: url(https://s3.ap-south-1.amazonaws.com/mystore-solidus/assets/pages/img/new-af65c343f0f869ad68e4bf9ba05f9cc88ae610ae560082901536087d3bbbb9be.png) no-repeat;
 	left: auto;
 	right: 0;
 }
