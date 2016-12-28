@@ -18,11 +18,11 @@
 //= require owl.carousel
 //= require jquery-zoom
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 
 
-$(document).ready(function() {
+$(document).on("ready", function() {
 	Layout.init();    
 	Layout.initOWL();
 	Layout.initImageZoom();
