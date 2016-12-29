@@ -1,1 +1,21 @@
-@import "../../application";
+/*@import "../../application";*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "../../bootstrap-touchspin/src/jquery.bootstrap-touchspin.css";
+@import "../../fancybox/source/jquery.fancybox.css";
+@import "font-awesome";
+@import "../../owl.carousel.css";
+
+
+@import "corporate/css/style.css.scss";
+@import "corporate/css/style-responsive.css.scss";
+@import "corporate/css/custom.css.scss";
+@import "corporate/css/themes/blue.css.scss";
+@import "pages/css/animate.css.scss";
+@import "pages/css/components.css.scss";
+@import "pages/css/gallery.css.scss";
+@import "pages/css/portfolio.css.scss";
+@import "pages/css/slider.css.scss";
+@import "pages/css/style-shop.css.scss";
+
