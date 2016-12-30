@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*@import "../../application";*/
+/*@import "../../application.css.scss";*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -8,7 +8,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(../../bootstrap-touchspin/src/jquery.bootstrap-touchspin.css);
 @import url(../../fancybox/source/jquery.fancybox.css);
-@import url(../../owl.carousel.css);
+@import url(../../owl.carousel/dist/assets/owl.carousel.css);
 /* line 9, /home/novneet/.rvm/gems/ruby-2.2.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
