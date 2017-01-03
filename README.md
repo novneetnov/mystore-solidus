@@ -1,6 +1,6 @@
 ## ToDo:  
-- Install all the frontend componenets.
-- Divide the header into navbar and other partials.
+- (x) Install all the frontend componenets.
+- (x) Divide the header into navbar and other partials.
 - (x) Put the images, css and js assets into place.
 - Cart:
 	- (x) Make the Cart in the navbar empty initially. 
@@ -8,15 +8,16 @@
 	- Figure out how to display total number of items and total price of cart in the Homepage.
 - (x) Get jq-slim-scroll working
 - (x) Logo method to provide custom Logo.
-- Taxonomy:
+- (x) Taxonomy:
 	- (x) Correct & Complete the Taxonomy in the main navbar
 	- (x)Add products with categories(taxonomies) in the admin section
 - (x) Complete the landing Carousel
 - Implement the *Add to Cart* link and check if it is working in the navbar
-- Correct the fast view for the Products.
+- (x) Correct the fast view for the Products.
 - Create the Product Show Page.
 - (x)Create the Pre Footer and Footer section
-- Figure out how to access static AWS uploads in the Views.
+- (x) Figure out how to access static AWS uploads in the Views.
 - (x)Make the App work in Heroku after having all static images in AWS S3. 
 - Make Turbolinks work
 - (x) How to set the User created as an Admin User. And how to create an Admin User from start?
+- Fix the fancybox overlay and fancybox sprite image.

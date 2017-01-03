@@ -1,0 +1,10 @@
+<li id="link-to-cart" data-hook>
+	<noscript>
+		<%= link_to Spree.t(:cart), '/cart' %>
+	</noscript>
+	&nbsp;
+	</li>
+	<script>Spree.fetch_cart('<%= j spree.cart_link_url %>')</script>
+
+	<%= render partial: "spree/shared/line_items", locals: { order: order } %>
+</li>

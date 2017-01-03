@@ -44,17 +44,7 @@
 						</div>
 					<% else %>
 						<ul class="scroller" style="height: 250px;">
-							<li>
-								<%= @order.line_items.each do |line_item| %>
-									<%= link_to line_item_path do %>
-										<%= image_tag line_item.image, alt: "" %>
-									<% end %>
-								<% end %>
-								<span class="cart-content-count">x <%= line_item.quantity %></span>
-								<strong><%= link_to line_item.title, line_item_path %></strong>
-								<em><%= number_to_currency line_item.price %></em>
-								<a href="javascript:void(0);" class="del-goods">&nbsp;</a>
-							</li>
+							<%= render partial: "spree/shared/cart", locals: { order: @order } %>
 						</ul>
 						<div class="text-right">
 							<%= link_to "View Cart", cart_path, class: "btn btn-default btn-xs" %>

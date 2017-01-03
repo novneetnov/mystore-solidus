@@ -1,0 +1,10 @@
+<% order.line_items.each do |line_item| %>
+	<li>
+		<%= link_to line_item.variant.product do %>
+			<%= image_tag line_item.variant.display_image.attachment(:mini), alt: "" %>
+		<% end %>
+		<span class="cart-content-count">x <%= line_item.quantity %></span>
+		<strong><%= link_to line_item.name, line_item.variant.product  %></strong>
+		<em><%= line_item.display_price %></em>
+	</li>
+<% end %>
