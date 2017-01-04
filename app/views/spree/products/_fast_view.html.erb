@@ -6,12 +6,12 @@
 					<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
 				</div>
 				<div class="product-other-images">
-					<%= link_to("javascript:;", class: "active") do %>
-						<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
-					<% end %>
-					<%= link_to("javascript:;", class: "active") do %>
-						<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
-					<% end %>
+					<div id="thumbnails" data-hook>
+						<%= render :partial => 'spree/products/fast_view_thumbnails', locals: { product: product } %>
+					</div>
+					<%#<%= link_to("javascript:;", class: "active") do %>
+						<%#<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
+					<%#<% end %>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-9">
@@ -53,7 +53,7 @@
 						<input id="product-quantity" type="text" value="1" readonly name="product-quantity" class="form-control input-sm">
 					</div>
 					<button class="btn btn-primary" type="submit">Add to cart</button>
-					<a href="shop-item.html" class="btn btn-default">More details</a>
+					<%= link_to "More Derails", product_path(product), class: "btn btn-default" %>
 				</div>
 			</div>
 		</div>

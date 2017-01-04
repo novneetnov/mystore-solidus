@@ -2,11 +2,11 @@
 	<h2>New Arrivals</h2>
 	<div class="owl-carousel owl-carousel5">
 		<% @new_arrivals.each do |new_arrival| %>
-			<%= render partial: 'spree/shared/item', locals: { item: new_arrival } %>
+			<%= render partial: 'spree/products/item', locals: { item: new_arrival } %>
 		<% end %>
 	</div>
 </div>
 
 <% @new_arrivals.each do |new_arrival| %>
-	<%= render partial: "spree/shared/fast_view", locals: { product: new_arrival } %>
+	<%= render partial: "spree/products/fast_view", locals: { product: new_arrival } %>
 <% end %>
