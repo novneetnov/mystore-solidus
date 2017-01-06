@@ -1,17 +1,19 @@
-<div id="product-pop-up_<%= product.id %>" style="display: none; width: 700px;">
+<div id="product-pop-up_<%= product.id %>" style="">
 	<div class="product-page product-pop-up">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-3">
-				<div class="product-main-image">
-					<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
-				</div>
-				<div class="product-other-images">
-					<div id="thumbnails" data-hook>
-						<%= render :partial => 'spree/products/fast_view_thumbnails', locals: { product: product } %>
+				<div class="product-images">
+					<div class="product-main-image">
+						<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
 					</div>
-					<%#<%= link_to("javascript:;", class: "active") do %>
-						<%#<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
-					<%#<% end %>
+					<div class="product-other-images">
+						<div id="thumbnails" data-hook>
+							<%= render :partial => 'spree/products/fast_view_thumbnails', locals: { product: product } %>
+						</div>
+						<%#<%= link_to("javascript:;", class: "active") do %>
+							<%#<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
+						<%#<% end %>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-9">
@@ -19,42 +21,16 @@
 				<div class="price-availability-block clearfix">
 					<div class="price">
 						<strong><%= product.display_price %></strong>
-						<!--em><span>
-							<%#<%= product.price*2 %>
-						</span></em-->
 					</div>
-					<div class="availability">
+					<!--div class="availability">
 						Availability: <strong>In Stock</strong>
-					</div>
+					</div-->
 				</div>
 				<div class="description">
-					<p><%= product.description %></p>
+					<p><%= truncate(product.description, length: 500) %></p>
 				</div>
-				<div class="product-page-options">
-					<div class="pull-left">
-						<label class="control-label">Size:</label>
-						<select class="form-control input-sm">
-							<option>L</option>
-							<option>M</option>
-							<option>XL</option>
-						</select>
-					</div>
-					<div class="pull-left">
-						<label class="control-label">Color:</label>
-						<select class="form-control input-sm">
-							<option>Red</option>
-							<option>Blue</option>
-							<option>Black</option>
-						</select>
-					</div>
-				</div>
-				<div class="product-page-cart">
-					<div class="product-quantity">
-						<input id="product-quantity" type="text" value="1" readonly name="product-quantity" class="form-control input-sm">
-					</div>
-					<button class="btn btn-primary" type="submit">Add to cart</button>
-					<%= link_to "More Derails", product_path(product), class: "btn btn-default" %>
-				</div>
+
+				<%= render partial: "spree/products/fast_view_cart_form", locals: { product: product } %>
 			</div>
 		</div>
 	</div>

@@ -213,7 +213,18 @@ var Layout = function () {
             return;
         }
         
-        jQuery(".fancybox-fast-view").fancybox();
+        jQuery(".fancybox-fast-view").fancybox({
+					//type: 'ajax',
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '70%',
+					height		: '70%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
 
         if (jQuery(".fancybox-button").size() > 0) {            
             jQuery(".fancybox-button").fancybox({

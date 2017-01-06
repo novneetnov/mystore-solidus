@@ -3,15 +3,13 @@
 		<div class="pi-img-wrapper">
 			<%= image_tag(item.display_image.attachment(:product), class: "img-responsive", alt: "") %>
 			<div>
-				<%= link_to "Quick View", "#product-pop-up_#{ item.id }", class: "btn btn-default fancybox-fast-view" %>
-				<%#<%= render partial: "spree/shared/fast_view", locals: { product: item } %>
+				<%= link_to "Quick View", "/fast_view/#{item.id}", class: "btn btn-default fancybox.ajax fancybox-fast-view" %>
 			</div>
 		</div>
 		<h3>
 			<%= link_to item.name, product_path(item) %>
 		</h3>
 		<div class="pi-price"><%= item.display_price.to_html %></div>
-		<%#<%= button_to "Add to Cart", populate_orders_path(quantity: 1, variant_id: item.variants.first.id), method: :post, class: "btn btn-default add2cart" %>
 		<%= button_to populate_orders_path, params: { quantity: 1, variant_id: item.variants.first.id } do %>
 			<span class="btn btn-default add2cart">Add to Cart</span>
 		<% end %>
