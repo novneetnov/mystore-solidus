@@ -16,3 +16,19 @@ div.pi-price {
 	float: left;
 	margin-top: 2px;
 }
+
+ul#product-thumbnails {
+	list-style: none;
+	padding-left: 0px;
+	float: left;
+	
+	li {
+		/*display: inline;*/
+
+		a:active, a:focus, a:hover {
+			img {
+				border: 1px solid green;
+			}
+		}
+	}
+}

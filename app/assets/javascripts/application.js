@@ -19,6 +19,7 @@
 //= require jquery-zoom
 //= require jquery_ujs
 // require turbolinks
+//= require thumbnails
 //= require_tree .
 
 

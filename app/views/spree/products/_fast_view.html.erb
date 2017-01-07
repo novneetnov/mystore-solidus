@@ -1,11 +1,8 @@
 <div id="product-pop-up_<%= product.id %>" style="">
 	<div class="product-page product-pop-up">
 		<div class="row">
-			<div class="col-md-6 col-sm-6 col-xs-3">
+			<div class="col-md-7 col-sm-7 col-xs-3">
 				<div class="product-images">
-					<div class="product-main-image">
-						<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
-					</div>
 					<div class="product-other-images">
 						<div id="thumbnails" data-hook>
 							<%= render :partial => 'spree/products/fast_view_thumbnails', locals: { product: product } %>
@@ -14,9 +11,12 @@
 							<%#<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
 						<%#<% end %>
 					</div>
+					<div class="product-main-image">
+						<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-9">
+			<div class="col-md-5 col-sm-5 col-xs-9">
 				<h2><%= product.name %></h2>
 				<div class="price-availability-block clearfix">
 					<div class="price">
@@ -37,6 +37,7 @@
 </div>
 
 <script>
-	Layout.initTouchspin();
-	Layout.initImageZoom();
+
+fastViewHandlers();
+
 </script>

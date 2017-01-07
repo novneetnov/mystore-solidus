@@ -10,7 +10,6 @@ module Spree
     end
 
 		def fast_view
-			#byebug
 			@product = Spree::Product.find(params[:id])	
 			respond_to do |format|
 				#render partial: "spree/products/fast_view", locals: { product: product }

@@ -218,7 +218,7 @@ var Layout = function () {
 					//maxWidth	: 800,
 					//maxHeight	: 600,
 					fitToView	: true,
-					//width		: '70%',
+					width		: '70%',
 					//height		: '70%',
 					autoSize	: false,
 					closeClick	: false,
@@ -464,6 +464,7 @@ var Layout = function () {
 
         initImageZoom: function () {
             $('.product-main-image').zoom({url: $('.product-main-image img').attr('data-BigImgSrc')});
+						console.log("loaded");
         },
 
         initSliderRange: function () {
