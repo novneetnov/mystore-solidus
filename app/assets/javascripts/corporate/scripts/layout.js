@@ -464,7 +464,6 @@ var Layout = function () {
 
         initImageZoom: function () {
             $('.product-main-image').zoom({url: $('.product-main-image img').attr('data-BigImgSrc')});
-						console.log("loaded");
         },
 
         initSliderRange: function () {

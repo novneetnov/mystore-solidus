@@ -4,14 +4,14 @@
 			<div class="col-md-7 col-sm-7 col-xs-3">
 				<div class="product-images">
 					<div class="product-other-images">
-						<div id="thumbnails" data-hook>
+						<div id="thumbnails" class="col-md-2" data-hook>
 							<%= render :partial => 'spree/products/fast_view_thumbnails', locals: { product: product } %>
 						</div>
 						<%#<%= link_to("javascript:;", class: "active") do %>
 							<%#<%= image_tag product.display_image.attachment(:mini), alt: "Images" %>
 						<%#<% end %>
 					</div>
-					<div class="product-main-image">
+					<div class="product-main-image col-md-10">
 						<%= image_tag product.display_image.attachment(:original), alt: "Image Not Available", class: "img-responsive" %>
 					</div>
 				</div>
@@ -38,6 +38,6 @@
 
 <script>
 
-fastViewHandlers();
+fastViewHandlers(); 
 
 </script>

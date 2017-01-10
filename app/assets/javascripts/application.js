@@ -20,13 +20,14 @@
 //= require jquery_ujs
 // require turbolinks
 //= require thumbnails
+// require jquery.elevateZoom-3.0.8.min 
 //= require_tree .
 
 
 $(document).on("ready", function() {
 	Layout.init();    
 	Layout.initOWL();
-	Layout.initImageZoom();
+	//Layout.initImageZoom();
 	Layout.initTouchspin();
 	Layout.initTwitter();
 });
