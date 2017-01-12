@@ -1,0 +1,82 @@
+<% @body_id = 'cart' %>
+<div class="container" data-hook="cart_container">
+  <h1><%= Spree.t(:shopping_cart) %></h1>
+
+  <% if @order.line_items.empty? %>
+
+    <div data-hook="empty_cart">
+      <p><%= Spree.t(:your_cart_is_empty) %></p>
+      <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
+    </div>
+
+  <% else %>
+
+    <div data-hook="outside_cart_form">
+      <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+        <div class="goods-page row" data-hook="inside_cart_form">
+
+          <div class="col-md-8" data-hook="cart_items">
+            <%= render :partial => 'form', :locals => { :order_form => order_form } %>
+          </div>
+
+					<div class="col-md-4">
+						<div class="links columns sixteen alpha omega input-group" data-hook="cart_buttons">
+								<%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code), class: "form-control" %>
+								<div class="input-group-btn">
+									<%= button_tag :class => 'btn btn-default btn-block', :id => 'update-button' do %>
+										<%= Spree.t(:update) %>
+										<i class="fa fa-refresh" aria-hidden="true"></i>
+									<% end %>
+								</div>
+						</div>
+						<hr>
+						<div class="shipping-total">
+							<% if @order.adjustments.nonzero.exists? || @order.line_item_adjustments.nonzero.exists? || @order.shipment_adjustments.nonzero.exists? || @order.shipments.any? %>
+								<div class="shipping-total-elem">
+									<span class="price-key">
+										<%= Spree.t(:cart_subtotal, :count => @order.line_items.sum(:quantity)) %>
+									</span>
+									<span class="price-value pull-right"><%= order_form.object.display_item_total %></span>
+								</div>
+								<%= render "spree/orders/adjustments" %>
+							<% end %>
+							<div class="shopping-total-price shipping-total-elem">
+								<span class="price-key">
+									<%= Spree.t(:total) %>
+								</span>
+								<span class="price-value pull-right"><%= order_form.object.display_total %></span>
+							</div>
+						</div>
+
+						<%= button_tag :class => 'btn btn-success btn-block', :id => 'checkout-link', :name => 'checkout' do %>
+							<%= Spree.t(:checkout) %>
+							<i class="fa fa-check"></i>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+
+		<hr>
+		
+    <div id="empty-cart" data-hook>
+      <%= form_tag empty_cart_path, :method => :put do %>
+        <p id="clear_cart_link" data-hook>
+				<%= button_tag type: "submit", :class => 'btn btn-danger btn-sm' do %>
+					<span class="fa-stack">
+						<i class="fa fa-shopping-cart fa-stack-2x"></i>
+						<i class="fa fa-times fa-stack-1x text-danger"></i>
+					</span>
+					<%= Spree.t(:empty_cart) %>
+				<% end %>
+        <%= Spree.t(:or) %>
+				<%= link_to products_path, :class => 'btn btn-success' do %>
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					<%= Spree.t(:continue_shopping) %>
+				<% end %>
+        </p>
+      <% end %>
+    </div>
+
+  <% end %>
+</div>

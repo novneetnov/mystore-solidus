@@ -32,3 +32,26 @@ ul#product-thumbnails {
 		}
 	}
 }
+
+
+form#update-cart {
+	div.goods-page {
+		div.col-md-4 {
+			border-left: 1px solid #dddddd; 
+			padding-left: 35px;
+		}
+		div.col-md-8 {
+			padding-right: 35px;
+		}
+
+		div.shipping-total {
+				font: "Helvetica,Arial,sans-serif";
+				span.price-key, .price-value {
+					font-size: 1.3em;
+				}
+				.shipping-total-elem {
+					padding-bottom: 12px;
+				}
+		}
+	}
+}

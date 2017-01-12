@@ -1,0 +1,11 @@
+<% if adjustments.sum(&:amount) != 0 %>
+	<div class="shipping-total-elem">
+		<span class="price-key">
+			<%= type %>: <%= label %>
+		</span>
+		<span class="price-key pull-right">
+			<%= Spree::Money.new(adjustments.sum(&:amount), :currency => @order.currency) %>
+		</span>
+	</div>
+
+<% end %>
