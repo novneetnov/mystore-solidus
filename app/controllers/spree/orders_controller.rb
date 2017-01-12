@@ -19,7 +19,6 @@ module Spree
 
     def update
       if @order.contents.update_cart(order_params)
-		byebug
         respond_with(@order) do |format|
           format.html do
             if params.key?(:checkout)
